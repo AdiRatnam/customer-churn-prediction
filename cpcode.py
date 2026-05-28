@@ -841,7 +841,6 @@ print("✅ Saved: fig8_confusion_matrices_baseline.png")
 # ============================================================
 # CELL 25 — Side-by-side metric comparison bar chart
 # Visual summary of all 5 models across all 6 metrics
-# Strong visual for your paper's results section
 # ============================================================
 
 baseline_df = pd.DataFrame(results['baseline']).T
@@ -1342,10 +1341,6 @@ print(f"  AUC      : {bc['auc']}")
 print("\n── Figures saved ──")
 print("  fig10_heatmap_recall_f1.png")
 
-print("\n── What to show professor ──")
-print("  1. Master comparison table (Cell 30)")
-print("  2. Heatmap figure (fig10)")
-print("  3. Wilcoxon p-values (Cell 34)")
 
 # ============================================================
 # CELL 36 — Override best combination for Week 5
@@ -1535,11 +1530,6 @@ y_pred_final_default = y_pred_tuned
 
 print(f"\n✅ xgb_final and y_prob_final are set and ready.")
 
-# ============================================================
-# SAVE CELL A — Add this RIGHT AFTER Cell 39
-# Saves model and key objects immediately after training
-# Run this every time you train a model
-# ============================================================
 
 import pickle
 import json
@@ -2076,10 +2066,6 @@ results['shap']['expected_value'] = float(expected_value)
 results['shap']['shap_values_shape'] = list(shap_values.shape)
 print(f"\n✅ SHAP metadata saved to results['shap']")
 
-# ============================================================
-# SAVE CELL C — Add this RIGHT AFTER Cell 46
-# Saves SHAP explainer immediately after building it
-# ============================================================
 
 import pickle
 
@@ -2611,26 +2597,6 @@ print(f"""
   results_dict.json
 """)
 
-print("  ── Professor Checkpoint — Week 6 ──")
-print("  Show these 4 things to your professor:")
-print("  1. fig13 — top features, ask if findings match domain knowledge")
-print("  2. fig14 — beeswarm, explain tenure and contract direction")
-print("  3. fig15 — walk through one customer prediction explanation")
-print("  4. Table 4 (Cell 51) — SHAP findings to business actions")
-print()
-print("  Key sentence to say:")
-print("  'Contract_Two year is the strongest protective factor.")
-print("   SHAP shows exactly which features drive each customer's")
-print("   churn risk and maps them to specific retention actions.'")
-print()
-print("  ── Next Steps ──")
-print("  After professor approves Week 6:")
-print("  → Week 7 : Full paper writing guide")
-print("  → Week 8 : Format + proofread + submit to MDPI Algorithms")
-print()
-print("=" * 65)
-print("  RESEARCH PHASE COMPLETE. READY FOR PAPER WRITING.")
-print("=" * 65)
 
 # ============================================================
 # ADDITION CELL A — ROC and PR curve for final model
